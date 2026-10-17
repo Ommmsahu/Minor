@@ -1,0 +1,28 @@
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Python environments and cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+
+# Large datasets and splits
+output/*.csv
+output/**/*.csv
+
+# Generated models and databases
+*.joblib
+*.pkl
+*.pt
+*.pth
+*.sqlite
+*.db
+# Large conflict-analysis export
+reports/conflicting_feature_labels.csv
+reports/task3_conflict_audit.sqlite

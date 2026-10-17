@@ -1,0 +1,3 @@
+file,original_rows,clean_rows,rows_match,columns_match,missing_cells,infinity_cells,labels_match
+Merged01.csv,712311,712311,True,True,0,0,True
+Merged02.csv,748585,748585,True,True,0,0,True

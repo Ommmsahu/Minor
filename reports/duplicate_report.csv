@@ -1,0 +1,3 @@
+file,total_rows,distinct_complete_records,duplicate_excess_rows
+Merged01.csv,712311,544943,167368
+Merged02.csv,748585,568678,179907
