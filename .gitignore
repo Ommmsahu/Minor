@@ -26,3 +26,5 @@ output/**/*.csv
 # Large conflict-analysis export
 reports/conflicting_feature_labels.csv
 reports/task3_conflict_audit.sqlite
+output/fl_cache/
+logs/

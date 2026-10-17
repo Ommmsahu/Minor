@@ -5,4 +5,5 @@ scikit-learn
 psutil
 joblib
 torch
-flwr
+flwr[simulation]
+ray

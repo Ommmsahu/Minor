@@ -1,0 +1,152 @@
+{
+  "command": "python -m federated.run_simulation --partition noniid --rounds 2",
+  "config": {
+    "partition": "noniid",
+    "rounds": 2,
+    "num_clients": 5,
+    "local_epochs": 1,
+    "batch_size": 256,
+    "lr": 0.001,
+    "seed": 42,
+    "alpha": 0.5
+  },
+  "versions": {
+    "python": "3.14.3",
+    "torch": "2.14.1+cpu",
+    "flwr": "1.40.0"
+  },
+  "device": "cpu",
+  "total_wall_clock_seconds": 28.36,
+  "rounds_completed": [
+    1,
+    2
+  ],
+  "participating_clients_per_round": {
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "2": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "client_updates": [
+    {
+      "round": 1,
+      "client_id": 3,
+      "partition": "noniid",
+      "num_examples": 145342,
+      "train_loss": 0.5597638731673172,
+      "train_seconds": 1.914
+    },
+    {
+      "round": 1,
+      "client_id": 4,
+      "partition": "noniid",
+      "num_examples": 180072,
+      "train_loss": 0.6447746683268106,
+      "train_seconds": 1.994
+    },
+    {
+      "round": 1,
+      "client_id": 2,
+      "partition": "noniid",
+      "num_examples": 185859,
+      "train_loss": 0.35325624403185596,
+      "train_seconds": 2.038
+    },
+    {
+      "round": 1,
+      "client_id": 0,
+      "partition": "noniid",
+      "num_examples": 197176,
+      "train_loss": 0.5674220122502446,
+      "train_seconds": 2.069
+    },
+    {
+      "round": 1,
+      "client_id": 1,
+      "partition": "noniid",
+      "num_examples": 344570,
+      "train_loss": 0.41708617738123765,
+      "train_seconds": 2.503
+    },
+    {
+      "round": 2,
+      "client_id": 3,
+      "partition": "noniid",
+      "num_examples": 145342,
+      "train_loss": 0.3510462207822798,
+      "train_seconds": 0.46
+    },
+    {
+      "round": 2,
+      "client_id": 4,
+      "partition": "noniid",
+      "num_examples": 180072,
+      "train_loss": 0.46288820755090343,
+      "train_seconds": 0.58
+    },
+    {
+      "round": 2,
+      "client_id": 2,
+      "partition": "noniid",
+      "num_examples": 185859,
+      "train_loss": 0.20999331580622063,
+      "train_seconds": 0.585
+    },
+    {
+      "round": 2,
+      "client_id": 0,
+      "partition": "noniid",
+      "num_examples": 197176,
+      "train_loss": 0.429388771220318,
+      "train_seconds": 0.64
+    },
+    {
+      "round": 2,
+      "client_id": 1,
+      "partition": "noniid",
+      "num_examples": 344570,
+      "train_loss": 0.3308162068517693,
+      "train_seconds": 1.063
+    }
+  ],
+  "server_validation_by_round": [
+    {
+      "round": 0,
+      "seconds_since_previous_call": 0.002,
+      "val_loss": 3.5290356929616653,
+      "val_accuracy": 0.0011025358324145535,
+      "val_balanced_accuracy": 0.012017210871103079,
+      "val_macro_f1": 0.0014380115884225825,
+      "val_weighted_f1": 0.000669887074916541
+    },
+    {
+      "round": 1,
+      "seconds_since_previous_call": 24.933,
+      "val_loss": 0.5992511985870554,
+      "val_accuracy": 0.7120672119518303,
+      "val_balanced_accuracy": 0.33698516972434445,
+      "val_macro_f1": 0.3031521468969139,
+      "val_weighted_f1": 0.6359084458250537
+    },
+    {
+      "round": 2,
+      "seconds_since_previous_call": 1.309,
+      "val_loss": 0.5178212765678284,
+      "val_accuracy": 0.730451355948138,
+      "val_balanced_accuracy": 0.4281212930895214,
+      "val_macro_f1": 0.39563512581234583,
+      "val_weighted_f1": 0.6698749709436614
+    }
+  ],
+  "validation_note": "Validation rows are a stratified 10% hold-out from train.csv. test.csv was not used."
+}
