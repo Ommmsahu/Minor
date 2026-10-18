@@ -1,0 +1,208 @@
+{
+  "run_id": "iid_seed42_20261018-055659_ae9694",
+  "command": "python -m federated.run_simulation --partition iid --rounds 2 --seed 42",
+  "config": {
+    "partition": "iid",
+    "rounds": 2,
+    "num_clients": 5,
+    "local_epochs": 1,
+    "batch_size": 256,
+    "lr": 0.001,
+    "seed": 42,
+    "alpha": 0.5,
+    "run_id": "iid_seed42_20261018-055659_ae9694"
+  },
+  "versions": {
+    "python": "3.14.4",
+    "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "torch": "2.14.1",
+    "flwr": "1.40.0",
+    "ray": "2.55.1",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1"
+  },
+  "device": "cpu",
+  "started_at": "2026-10-18T05:56:59",
+  "finished_at": "2026-10-18T05:57:12",
+  "total_wall_clock_seconds": 13.3,
+  "cache_id": "fa2397e9ebec264e",
+  "partition_meta": {
+    "partition_type": "iid",
+    "seed": 42,
+    "alpha": null,
+    "n_clients": 5,
+    "n_rows": 1053019,
+    "min_size": 1000,
+    "client_sizes": [
+      210618,
+      210611,
+      210603,
+      210596,
+      210591
+    ],
+    "cache_id": "fa2397e9ebec264e",
+    "method": "stratified IID deal"
+  },
+  "isolation_note": "Validation rows are a stratified 10% hold-out of train.csv. test.csv was not opened.",
+  "console_log": "/home/userq/Minor/logs/runs/iid_seed42_20261018-055659_ae9694/console.log",
+  "runtime_check": {
+    "status": "clean",
+    "fatal_messages_in_console_log": {},
+    "leftover_ray_processes": [],
+    "process_check_available": true
+  },
+  "status": "COMPLETE",
+  "errors": [],
+  "rounds_completed": [
+    1,
+    2
+  ],
+  "final_round": 2,
+  "participating_clients_per_round": {
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "2": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "client_updates": [
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 1,
+      "client_id": 3,
+      "partition": "iid",
+      "num_examples": 210596,
+      "train_loss": 0.6595030959796973,
+      "train_seconds": 1.454
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 1,
+      "client_id": 1,
+      "partition": "iid",
+      "num_examples": 210611,
+      "train_loss": 0.6602388945325213,
+      "train_seconds": 1.455
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 1,
+      "client_id": 2,
+      "partition": "iid",
+      "num_examples": 210603,
+      "train_loss": 0.6609457828200758,
+      "train_seconds": 1.463
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 1,
+      "client_id": 4,
+      "partition": "iid",
+      "num_examples": 210591,
+      "train_loss": 0.6584563349163083,
+      "train_seconds": 1.475
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 1,
+      "client_id": 0,
+      "partition": "iid",
+      "num_examples": 210618,
+      "train_loss": 0.6592661862360493,
+      "train_seconds": 1.482
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 2,
+      "client_id": 3,
+      "partition": "iid",
+      "num_examples": 210596,
+      "train_loss": 0.49723216061506154,
+      "train_seconds": 0.622
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 2,
+      "client_id": 4,
+      "partition": "iid",
+      "num_examples": 210591,
+      "train_loss": 0.4983272307062008,
+      "train_seconds": 0.627
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 2,
+      "client_id": 2,
+      "partition": "iid",
+      "num_examples": 210603,
+      "train_loss": 0.49841163434564023,
+      "train_seconds": 0.633
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 2,
+      "client_id": 0,
+      "partition": "iid",
+      "num_examples": 210618,
+      "train_loss": 0.49875878667103324,
+      "train_seconds": 0.642
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 2,
+      "client_id": 1,
+      "partition": "iid",
+      "num_examples": 210611,
+      "train_loss": 0.49822271336776097,
+      "train_seconds": 0.642
+    }
+  ],
+  "server_validation_by_round": [
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 0,
+      "cache_id": "fa2397e9ebec264e",
+      "server_callback_interval_s": 0.002,
+      "timing_note": "server_callback_interval_s is the wall-clock gap between global-validation callbacks (it includes client training waiting time and validation). It is not client training time and not energy use.",
+      "val_loss": 3.5290356428828216,
+      "val_accuracy": 0.0011025358324145535,
+      "val_balanced_accuracy": 0.012017210871103079,
+      "val_macro_f1": 0.0014380115884225825,
+      "val_weighted_f1": 0.000669887074916541
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 1,
+      "cache_id": "fa2397e9ebec264e",
+      "server_callback_interval_s": 8.076,
+      "timing_note": "server_callback_interval_s is the wall-clock gap between global-validation callbacks (it includes client training waiting time and validation). It is not client training time and not energy use.",
+      "val_loss": 0.5034453785706884,
+      "val_accuracy": 0.7446903070861431,
+      "val_balanced_accuracy": 0.4402046026847269,
+      "val_macro_f1": 0.4363267281212274,
+      "val_weighted_f1": 0.7087981464103361
+    },
+    {
+      "run_id": "iid_seed42_20261018-055659_ae9694",
+      "round": 2,
+      "cache_id": "fa2397e9ebec264e",
+      "server_callback_interval_s": 0.704,
+      "timing_note": "server_callback_interval_s is the wall-clock gap between global-validation callbacks (it includes client training waiting time and validation). It is not client training time and not energy use.",
+      "val_loss": 0.48631651714125385,
+      "val_accuracy": 0.7510320248198764,
+      "val_balanced_accuracy": 0.4757084283682932,
+      "val_macro_f1": 0.4723914142472535,
+      "val_weighted_f1": 0.7304613831664553
+    }
+  ]
+}

@@ -7,3 +7,4 @@ joblib
 torch
 flwr[simulation]
 ray
+pytest
