@@ -25,6 +25,17 @@ class MLP(nn.Module):
         return self.net(x)
 
 
+def check_state_shapes(state: dict, reference: dict, where: str = "model") -> None:
+    """Parameter names and shapes must match the shared MLP exactly (loading or returning updates)."""
+    if list(state.keys()) != list(reference.keys()):
+        raise ValueError(f"{where}: parameter names differ from the shared MLP: {list(state.keys())} vs {list(reference.keys())}")
+    for k, ref in reference.items():
+        if tuple(state[k].shape) != tuple(ref.shape):
+            raise ValueError(f"{where}: parameter '{k}' has shape {tuple(state[k].shape)}, expected {tuple(ref.shape)}")
+        if not torch.isfinite(state[k]).all():
+            raise ValueError(f"{where}: parameter '{k}' contains non-finite values")
+
+
 def train_local(model: nn.Module, X: np.ndarray, y: np.ndarray, epochs: int, batch_size: int, lr: float, seed: int) -> float:
     """Train in place on local data. Returns mean training loss over the last epoch."""
     gen = torch.Generator().manual_seed(seed)
