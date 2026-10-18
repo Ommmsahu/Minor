@@ -1,0 +1,211 @@
+{
+  "run_id": "iid_seed42_20261017-212509_311b56",
+  "command": "python -m federated.run_simulation --partition iid --rounds 2 --seed 42",
+  "config": {
+    "partition": "iid",
+    "rounds": 2,
+    "num_clients": 5,
+    "local_epochs": 1,
+    "batch_size": 256,
+    "lr": 0.001,
+    "seed": 42,
+    "alpha": 0.5,
+    "run_id": "iid_seed42_20261017-212509_311b56"
+  },
+  "versions": {
+    "python": "3.14.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.14.1",
+    "flwr": "1.40.0",
+    "ray": "2.59.0",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1"
+  },
+  "device": "cpu",
+  "started_at": "2026-10-17T21:25:09",
+  "finished_at": "2026-10-17T21:25:38",
+  "total_wall_clock_seconds": 29.69,
+  "cache_id": "fa2397e9ebec264e",
+  "partition_meta": {
+    "partition_type": "iid",
+    "seed": 42,
+    "alpha": null,
+    "n_clients": 5,
+    "n_rows": 1053019,
+    "min_size": 1000,
+    "client_sizes": [
+      210618,
+      210611,
+      210603,
+      210596,
+      210591
+    ],
+    "cache_id": "fa2397e9ebec264e",
+    "method": "stratified IID deal"
+  },
+  "isolation_note": "Validation rows are a stratified 10% hold-out of train.csv. test.csv was not opened.",
+  "console_log": "C:\\omm\\college\\minor\\Minor\\logs\\runs\\iid_seed42_20261017-212509_311b56\\console.log",
+  "runtime_check": {
+    "status": "problems_detected",
+    "fatal_messages_in_console_log": {
+      "access violation": 6,
+      "Windows fatal exception": 5
+    },
+    "leftover_ray_processes": [],
+    "process_check_available": true
+  },
+  "status": "COMPLETE",
+  "errors": [],
+  "rounds_completed": [
+    1,
+    2
+  ],
+  "final_round": 2,
+  "participating_clients_per_round": {
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "2": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "client_updates": [
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 1,
+      "client_id": 3,
+      "partition": "iid",
+      "num_examples": 210596,
+      "train_loss": 0.6595231455584537,
+      "train_seconds": 2.387
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 1,
+      "client_id": 2,
+      "partition": "iid",
+      "num_examples": 210603,
+      "train_loss": 0.6609406853630885,
+      "train_seconds": 2.401
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 1,
+      "client_id": 4,
+      "partition": "iid",
+      "num_examples": 210591,
+      "train_loss": 0.6584883405500571,
+      "train_seconds": 2.393
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 1,
+      "client_id": 1,
+      "partition": "iid",
+      "num_examples": 210611,
+      "train_loss": 0.6602388964777783,
+      "train_seconds": 2.405
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 1,
+      "client_id": 0,
+      "partition": "iid",
+      "num_examples": 210618,
+      "train_loss": 0.6592661847112516,
+      "train_seconds": 2.407
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 2,
+      "client_id": 2,
+      "partition": "iid",
+      "num_examples": 210603,
+      "train_loss": 0.49841932527797733,
+      "train_seconds": 0.737
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 2,
+      "client_id": 3,
+      "partition": "iid",
+      "num_examples": 210596,
+      "train_loss": 0.4972717882093671,
+      "train_seconds": 0.739
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 2,
+      "client_id": 1,
+      "partition": "iid",
+      "num_examples": 210611,
+      "train_loss": 0.4982927969541749,
+      "train_seconds": 0.751
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 2,
+      "client_id": 0,
+      "partition": "iid",
+      "num_examples": 210618,
+      "train_loss": 0.49871066090794824,
+      "train_seconds": 0.751
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 2,
+      "client_id": 4,
+      "partition": "iid",
+      "num_examples": 210591,
+      "train_loss": 0.4983763857797062,
+      "train_seconds": 0.755
+    }
+  ],
+  "server_validation_by_round": [
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 0,
+      "cache_id": "fa2397e9ebec264e",
+      "server_callback_interval_s": 0.002,
+      "timing_note": "server_callback_interval_s is the wall-clock gap between global-validation callbacks (it includes client training waiting time and validation). It is not client training time and not energy use.",
+      "val_loss": 3.5290356929616653,
+      "val_accuracy": 0.0011025358324145535,
+      "val_balanced_accuracy": 0.012017210871103079,
+      "val_macro_f1": 0.0014380115884225825,
+      "val_weighted_f1": 0.000669887074916541
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 1,
+      "cache_id": "fa2397e9ebec264e",
+      "server_callback_interval_s": 22.56,
+      "timing_note": "server_callback_interval_s is the wall-clock gap between global-validation callbacks (it includes client training waiting time and validation). It is not client training time and not energy use.",
+      "val_loss": 0.5032842154604876,
+      "val_accuracy": 0.7448526960847158,
+      "val_balanced_accuracy": 0.440439017624096,
+      "val_macro_f1": 0.4370283144204435,
+      "val_weighted_f1": 0.7102458079625712
+    },
+    {
+      "run_id": "iid_seed42_20261017-212509_311b56",
+      "round": 2,
+      "cache_id": "fa2397e9ebec264e",
+      "server_callback_interval_s": 1.025,
+      "timing_note": "server_callback_interval_s is the wall-clock gap between global-validation callbacks (it includes client training waiting time and validation). It is not client training time and not energy use.",
+      "val_loss": 0.48639674344955364,
+      "val_accuracy": 0.7499807697238532,
+      "val_balanced_accuracy": 0.47576842489789195,
+      "val_macro_f1": 0.4725017693390041,
+      "val_weighted_f1": 0.730160588587554
+    }
+  ]
+}
