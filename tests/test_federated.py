@@ -406,3 +406,21 @@ if __name__ == "__main__":
             except Exception as exc:  # report every failure, then exit non-zero
                 failed += 1; print("FAIL", name, "->", repr(exc))
     sys.exit(1 if failed else 0)
+
+
+def test_runtime_check_flags_raylet_stack_dump(tmp_path):
+    from federated import run_simulation as rs
+    log = tmp_path / "console.log"
+    log.write_text("(raylet) Stack (most recent call first):\n"
+                   "(raylet)   File \"worker.py\", line 2118 in shutdown\n")
+    result = rs.runtime_check(log, rs.ray_pids(), settle_seconds=0)
+    assert result["status"] == "problems_detected"
+    assert result["fatal_messages_in_console_log"]
+
+
+def test_runtime_check_ignores_normal_logs(tmp_path):
+    from federated import run_simulation as rs
+    log = tmp_path / "console.log"
+    log.write_text("INFO : aggregate_train: Received 5 results and 0 failures\n")
+    result = rs.runtime_check(log, rs.ray_pids(), settle_seconds=0)
+    assert result["fatal_messages_in_console_log"] == {}

@@ -29,7 +29,7 @@ from federated.io_utils import atomic_write_json, atomic_write_text
 from federated.partition_data import PartitionError, verify_partition_files
 from federated.run_checks import check_run_integrity, select_final_record
 
-RUNTIME_ERROR_PATTERNS = [r"access violation", r"Windows fatal exception", r"Segmentation fault", r"Fatal Python error"]
+RUNTIME_ERROR_PATTERNS = [r"access violation", r"Windows fatal exception", r"Segmentation fault", r"Fatal Python error" , r"Stack \(most recent call first\)"]
 RAY_PROCESS_NAMES = {"raylet", "raylet.exe", "gcs_server", "gcs_server.exe"}
 
 
